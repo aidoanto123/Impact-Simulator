@@ -302,7 +302,7 @@ const Simulator = () => {
 
         {/* Educational Content */}
         {showEducation && (
-          <Card className="mb-8 bg-gray-800/30 border-gray-700">
+          <Card className="mb-8 bg-gray-900/80 border-orange-500/30 backdrop-blur-md">
             <CardHeader>
               <CardTitle className="text-white">Asteroid Education</CardTitle>
             </CardHeader>
