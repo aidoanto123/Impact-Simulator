@@ -8,15 +8,26 @@ from models.simulation import Simulation, SimulationCreate, SimulationUpdate, Im
 from models.asteroid import Asteroid
 from services.nasa_neo_service import nasa_neo_service
 from services.physics_engine import physics_engine
-from motor.motor_asyncio import AsyncIOMotorClient
-import os
 
 logger = logging.getLogger(__name__)
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+def get_database():
+    \"\"\"Get database connection\"\"\"
+    from motor.motor_asyncio import AsyncIOMotorClient
+    import os
+    from dotenv import load_dotenv
+    from pathlib import Path
+    
+    # Load environment variables
+    ROOT_DIR = Path(__file__).parent.parent
+    load_dotenv(ROOT_DIR / '.env')
+    
+    mongo_url = os.environ['MONGO_URL']
+    client = AsyncIOMotorClient(mongo_url)
+    return client[os.environ['DB_NAME']]
+
+# Initialize database connection
+db = get_database()
 
 router = APIRouter(prefix="/api/simulation", tags=["Enhanced Simulation"])
 
