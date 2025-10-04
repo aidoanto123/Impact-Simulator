@@ -291,58 +291,7 @@ const Simulator = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 pb-16">
 
-        {/* Educational Content */}
-        {showEducation && (
-          <Card className="mb-8 bg-gray-900/80 border-orange-500/30 backdrop-blur-md">
-            <CardHeader>
-              <CardTitle className="text-white">Asteroid Education</CardTitle>
-            </CardHeader>
-            <CardContent className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-semibold text-orange-400 mb-3">Asteroid Types</h4>
-                {Object.entries(educationalContent.asteroidTypes).map(([key, type]) => (
-                  <div key={key} className="mb-3 p-3 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
-                    <div className="font-medium text-white">{type.name}</div>
-                    <div className="text-sm text-gray-300">Density: {type.density}</div>
-                    <div className="text-sm text-gray-400">{type.composition}</div>
-                    <div className="text-xs text-orange-400">{type.percentage}</div>
-                  </div>
-                ))}
-              </div>
-              <div>
-                <h4 className="font-semibold text-orange-400 mb-3">Impact Physics</h4>
-                {Object.entries(educationalContent.impactPhysics).map(([key, formula]) => (
-                  <div key={key} className="mb-3 p-3 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
-                    <div className="font-medium text-white capitalize">{key}</div>
-                    <div className="text-sm font-mono text-gray-300">{formula}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Historical Comparisons */}
-        {showComparison && (
-          <Card className="mb-8 bg-gray-900/80 border-orange-500/30 backdrop-blur-md">
-            <CardHeader>
-              <CardTitle className="text-white">Historical Impact Comparisons</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-4">
-                {historicalComparisons.map((event, index) => (
-                  <div key={index} className="p-4 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
-                    <h4 className="font-semibold text-orange-400">{event.name}</h4>
-                    <div className="text-2xl font-bold text-white">
-                      {event.energy.toLocaleString()} MT
-                    </div>
-                    <div className="text-sm text-gray-300">{event.description}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        )}
+        {/* Educational and Historical content sections removed */}
 
         {/* Controls Section */}
         <Card className="mb-8 bg-gray-900/80 border-orange-500/30 backdrop-blur-md">
