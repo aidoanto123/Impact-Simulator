@@ -389,10 +389,10 @@ const Simulator = () => {
               <div>
                 <Label className="text-white mb-2 block">Predefined Scenarios</Label>
                 <Select value={selectedScenario} onValueChange={loadScenario}>
-                  <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
+                  <SelectTrigger className="bg-black/50 border-orange-500/30 text-white backdrop-blur-md">
                     <SelectValue placeholder="Select a scenario" />
                   </SelectTrigger>
-                  <SelectContent className="bg-gray-800 border-gray-600">
+                  <SelectContent className="bg-black/90 border-orange-500/30 backdrop-blur-md">
                     {predefinedScenarios.map(scenario => (
                       <SelectItem key={scenario.id} value={scenario.id} className="text-white">
                         {scenario.name}
