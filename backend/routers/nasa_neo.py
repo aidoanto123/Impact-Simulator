@@ -105,6 +105,9 @@ async def get_asteroid_by_id(nasa_id: str):
         # Check cache first
         cached_asteroid = await db.asteroids.find_one({"nasa_id": nasa_id})
         if cached_asteroid:
+            # Convert ObjectId to string for Pydantic model
+            if '_id' in cached_asteroid:
+                cached_asteroid['_id'] = str(cached_asteroid['_id'])
             return Asteroid(**cached_asteroid)
         
         # Fetch from NASA API
