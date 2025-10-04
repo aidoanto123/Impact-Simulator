@@ -8,6 +8,21 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/neo", tags=["NASA NEO Integration"])
 
+def get_database():
+    """Get database connection"""
+    from motor.motor_asyncio import AsyncIOMotorClient
+    import os
+    from dotenv import load_dotenv
+    from pathlib import Path
+    
+    # Load environment variables
+    ROOT_DIR = Path(__file__).parent.parent
+    load_dotenv(ROOT_DIR / '.env')
+    
+    mongo_url = os.environ['MONGO_URL']
+    client = AsyncIOMotorClient(mongo_url)
+    return client[os.environ['DB_NAME']]
+
 @router.get("/asteroids", response_model=AsteroidSearchResult)
 async def get_asteroids(
     limit: int = Query(20, ge=1, le=100, description="Number of asteroids to return"),
