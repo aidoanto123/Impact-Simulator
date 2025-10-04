@@ -340,7 +340,7 @@ const Simulator = () => {
             <CardContent>
               <div className="grid md:grid-cols-3 gap-4">
                 {historicalComparisons.map((event, index) => (
-                  <div key={index} className="p-4 bg-gray-800/50 rounded">
+                  <div key={index} className="p-4 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
                     <h4 className="font-semibold text-orange-400">{event.name}</h4>
                     <div className="text-2xl font-bold text-white">
                       {event.energy.toLocaleString()} MT
