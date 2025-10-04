@@ -3,15 +3,8 @@ from typing import List, Optional
 import logging
 from services.nasa_neo_service import nasa_neo_service
 from models.asteroid import Asteroid, AsteroidFilter, AsteroidSearchResult
-from motor.motor_asyncio import AsyncIOMotorClient
-import os
 
 logger = logging.getLogger(__name__)
-
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
 
 router = APIRouter(prefix="/api/neo", tags=["NASA NEO Integration"])
 
