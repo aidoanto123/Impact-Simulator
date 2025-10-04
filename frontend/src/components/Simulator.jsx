@@ -39,8 +39,7 @@ const Simulator = () => {
   const [simulationResults, setSimulationResults] = useState(null);
   const [selectedScenario, setSelectedScenario] = useState('');
   const [customMode, setCustomMode] = useState(false);
-  const [showComparison, setShowComparison] = useState(false);
-  const [showEducation, setShowEducation] = useState(false);
+  // Removed showComparison and showEducation state variables
   const [savedSimulations, setSavedSimulations] = useState([]);
   
   const [asteroidParams, setAsteroidParams] = useState({
