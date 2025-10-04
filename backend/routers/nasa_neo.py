@@ -52,6 +52,10 @@ async def get_asteroids(
             ).to_list(limit)
             
             if cached_asteroids:
+                # Fix ObjectId serialization for cached data
+                for asteroid_data in cached_asteroids:
+                    if '_id' in asteroid_data:
+                        asteroid_data['_id'] = str(asteroid_data['_id'])
                 asteroids = [Asteroid(**asteroid) for asteroid in cached_asteroids]
                 return AsteroidSearchResult(
                     asteroids=asteroids,
