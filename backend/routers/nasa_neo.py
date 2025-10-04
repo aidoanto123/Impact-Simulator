@@ -113,9 +113,11 @@ async def get_asteroid_by_id(nasa_id: str):
             asteroid = service.parse_neo_to_asteroid(neo_data)
             
             # Cache the result
+            asteroid_dict = asteroid.dict()
+            asteroid_dict.pop('_id', None)  # Remove the generated ID for upsert
             await db.asteroids.update_one(
                 {"nasa_id": asteroid.nasa_id},
-                {"$set": asteroid.dict()},
+                {"$set": asteroid_dict},
                 upsert=True
             )
             
