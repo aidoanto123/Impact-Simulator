@@ -23,6 +23,9 @@ def get_database():
     client = AsyncIOMotorClient(mongo_url)
     return client[os.environ['DB_NAME']]
 
+# Initialize database connection
+db = get_database()
+
 @router.get("/asteroids", response_model=AsteroidSearchResult)
 async def get_asteroids(
     limit: int = Query(20, ge=1, le=100, description="Number of asteroids to return"),
