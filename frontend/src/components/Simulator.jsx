@@ -298,7 +298,8 @@ const Simulator = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 pb-16">
+
         {/* Educational Content */}
         {showEducation && (
           <Card className="mb-8 bg-gray-800/30 border-gray-700">
