@@ -539,7 +539,7 @@ const Simulator = () => {
 
             {/* Tabbed Results */}
             <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-              <TabsList className="bg-gray-800/50 border-gray-700 p-1">
+              <TabsList className="bg-black/60 border-orange-500/30 p-1 backdrop-blur-md">
                 <TabsTrigger 
                   value="immediate" 
                   className="data-[state=active]:bg-orange-600 data-[state=active]:text-white text-gray-300"
