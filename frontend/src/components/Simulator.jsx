@@ -365,17 +365,17 @@ const Simulator = () => {
                 <Play className="mr-2" size={16} />
                 Run Simulation
               </Button>
-              <Button onClick={resetSimulation} variant="outline" className="border-gray-600 text-gray-300">
+              <Button onClick={resetSimulation} variant="outline" className="border-orange-500/50 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm">
                 <RotateCcw className="mr-2" size={16} />
                 Reset
               </Button>
               {simulationResults && (
                 <>
-                  <Button onClick={saveSimulation} variant="outline" className="border-gray-600 text-gray-300">
+                  <Button onClick={saveSimulation} variant="outline" className="border-orange-500/50 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm">
                     <Save className="mr-2" size={16} />
                     Save
                   </Button>
-                  <Button onClick={shareSimulation} variant="outline" className="border-gray-600 text-gray-300">
+                  <Button onClick={shareSimulation} variant="outline" className="border-orange-500/50 text-orange-300 hover:bg-orange-500/10 backdrop-blur-sm">
                     <Share2 className="mr-2" size={16} />
                     Share
                   </Button>
