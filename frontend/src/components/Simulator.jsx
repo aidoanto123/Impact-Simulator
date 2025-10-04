@@ -442,7 +442,7 @@ const Simulator = () => {
 
             {/* Custom Parameters */}
             {customMode && (
-              <div className="space-y-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
+              <div className="space-y-4 p-4 bg-black/40 rounded-lg border border-orange-500/30 backdrop-blur-md">
                 <h4 className="font-semibold text-white">Custom Asteroid Parameters</h4>
                 
                 <div className="grid md:grid-cols-2 gap-6">
