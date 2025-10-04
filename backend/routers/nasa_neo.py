@@ -203,9 +203,11 @@ async def sync_nasa_data(background_tasks: BackgroundTasks):
                                 asteroid = service.parse_neo_to_asteroid(neo_data)
                                 
                                 # Upsert to database
+                                asteroid_dict = asteroid.dict()
+                                asteroid_dict.pop('_id', None)  # Remove the generated ID for upsert
                                 await db.asteroids.update_one(
                                     {"nasa_id": asteroid.nasa_id},
-                                    {"$set": asteroid.dict()},
+                                    {"$set": asteroid_dict},
                                     upsert=True
                                 )
                                 
