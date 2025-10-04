@@ -285,16 +285,7 @@ const Simulator = () => {
             Experience the devastating power of cosmic collisions and witness the aftermath of an asteroid impact on Earth
           </p>
           
-          <div className="flex justify-center gap-4 mb-8">
-            <Button onClick={() => setShowEducation(!showEducation)} variant="outline" className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-              <BookOpen className="mr-2" size={16} />
-              Learn About Asteroids
-            </Button>
-            <Button onClick={() => setShowComparison(!showComparison)} variant="outline" className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10">
-              <BarChart3 className="mr-2" size={16} />
-              Historical Comparisons
-            </Button>
-          </div>
+          {/* Buttons removed as requested */}
         </div>
       </div>
 
