@@ -5,8 +5,14 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 import logging
 from models.asteroid import Asteroid, CloseApproach, OrbitalElements, DiameterEstimate, AsteroidFilter
+from dotenv import load_dotenv
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
+
+# Load environment variables
+ROOT_DIR = Path(__file__).parent.parent
+load_dotenv(ROOT_DIR / '.env')
 
 class NASANEOService:
     """Service for integrating with NASA NEO (Near Earth Object) API"""
