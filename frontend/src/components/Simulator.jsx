@@ -183,7 +183,7 @@ const Simulator = () => {
   };
 
   const renderMetricCard = (key, metric, type) => (
-    <Card key={key} className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-colors">
+    <Card key={key} className="bg-black/60 border-orange-500/30 hover:bg-black/80 transition-all duration-300 backdrop-blur-md hover:shadow-lg hover:shadow-orange-500/20">
       <CardContent className="p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
