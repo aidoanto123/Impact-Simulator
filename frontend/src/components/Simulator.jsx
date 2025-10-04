@@ -499,10 +499,10 @@ const Simulator = () => {
                           setAsteroidParams(prev => ({ ...prev, composition }))
                         }
                       >
-                        <SelectTrigger className="bg-gray-800 border-gray-600 text-white mt-2">
+                        <SelectTrigger className="bg-black/50 border-orange-500/30 text-white mt-2 backdrop-blur-md">
                           <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className="bg-gray-800 border-gray-600">
+                        <SelectContent className="bg-black/90 border-orange-500/30 backdrop-blur-md">
                           {Object.entries(compositionData).map(([key, data]) => (
                             <SelectItem key={key} value={key} className="text-white">
                               {key.charAt(0).toUpperCase() + key.slice(1)} - {data.description}
