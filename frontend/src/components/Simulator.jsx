@@ -641,7 +641,7 @@ const Simulator = () => {
             <CardContent>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {savedSimulations.map(sim => (
-                  <div key={sim.id} className="p-4 bg-gray-800/50 rounded border border-gray-600">
+                  <div key={sim.id} className="p-4 bg-black/40 rounded border border-orange-500/30 backdrop-blur-sm">
                     <h4 className="font-semibold text-white">{sim.name}</h4>
                     <p className="text-sm text-gray-300">
                       {sim.params.diameter}m {sim.params.composition} → {sim.params.location.name}
