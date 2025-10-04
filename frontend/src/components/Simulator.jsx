@@ -321,7 +321,7 @@ const Simulator = () => {
               <div>
                 <h4 className="font-semibold text-orange-400 mb-3">Impact Physics</h4>
                 {Object.entries(educationalContent.impactPhysics).map(([key, formula]) => (
-                  <div key={key} className="mb-3 p-3 bg-gray-800/50 rounded">
+                  <div key={key} className="mb-3 p-3 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
                     <div className="font-medium text-white capitalize">{key}</div>
                     <div className="text-sm font-mono text-gray-300">{formula}</div>
                   </div>
