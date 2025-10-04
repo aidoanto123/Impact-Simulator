@@ -634,7 +634,7 @@ const Simulator = () => {
 
         {/* Saved Simulations */}
         {savedSimulations.length > 0 && (
-          <Card className="mt-8 bg-gray-800/30 border-gray-700">
+          <Card className="mt-8 bg-black/60 border-orange-500/30 backdrop-blur-md">
             <CardHeader>
               <CardTitle className="text-white">Saved Simulations</CardTitle>
             </CardHeader>
