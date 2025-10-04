@@ -420,10 +420,10 @@ const Simulator = () => {
                     }
                   }}
                 >
-                  <SelectTrigger className="bg-gray-800 border-gray-600 text-white">
+                  <SelectTrigger className="bg-black/50 border-orange-500/30 text-white backdrop-blur-md">
                     <SelectValue />
                   </SelectTrigger>
-                  <SelectContent className="bg-gray-800 border-gray-600">
+                  <SelectContent className="bg-black/90 border-orange-500/30 backdrop-blur-md">
                     {locationSuggestions.map(location => (
                       <SelectItem key={location.name} value={location.name} className="text-white">
                         <div className="flex items-center gap-2">
