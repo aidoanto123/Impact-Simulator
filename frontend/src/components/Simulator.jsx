@@ -601,7 +601,7 @@ const Simulator = () => {
               </TabsContent>
 
               <TabsContent value="timeline" className="space-y-6">
-                <Card className="bg-gray-800/30 border-gray-700">
+                <Card className="bg-black/60 border-orange-500/30 backdrop-blur-md">
                   <CardHeader>
                     <CardTitle className="text-white">Impact Timeline</CardTitle>
                     <CardDescription className="text-gray-300">
