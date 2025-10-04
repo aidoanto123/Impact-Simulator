@@ -12,7 +12,7 @@ from services.physics_engine import physics_engine
 logger = logging.getLogger(__name__)
 
 def get_database():
-    \"\"\"Get database connection\"\"\"
+    """Get database connection"""
     from motor.motor_asyncio import AsyncIOMotorClient
     import os
     from dotenv import load_dotenv
