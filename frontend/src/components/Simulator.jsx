@@ -354,7 +354,7 @@ const Simulator = () => {
         )}
 
         {/* Controls Section */}
-        <Card className="mb-8 bg-gray-800/30 border-gray-700">
+        <Card className="mb-8 bg-gray-900/80 border-orange-500/30 backdrop-blur-md">
           <CardHeader>
             <CardTitle className="text-white">Simulation Controls</CardTitle>
             <div className="flex gap-2">
