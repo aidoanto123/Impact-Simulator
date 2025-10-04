@@ -310,7 +310,7 @@ const Simulator = () => {
               <div>
                 <h4 className="font-semibold text-orange-400 mb-3">Asteroid Types</h4>
                 {Object.entries(educationalContent.asteroidTypes).map(([key, type]) => (
-                  <div key={key} className="mb-3 p-3 bg-gray-800/50 rounded">
+                  <div key={key} className="mb-3 p-3 bg-black/40 rounded backdrop-blur-sm border border-orange-500/20">
                     <div className="font-medium text-white">{type.name}</div>
                     <div className="text-sm text-gray-300">Density: {type.density}</div>
                     <div className="text-sm text-gray-400">{type.composition}</div>
