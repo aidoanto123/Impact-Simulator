@@ -522,7 +522,7 @@ const Simulator = () => {
         {simulationResults && (
           <div className="space-y-6">
             {/* Event Summary */}
-            <Card className="bg-gradient-to-r from-red-900/20 to-orange-900/20 border-orange-500/30">
+            <Card className="bg-gradient-to-r from-red-900/40 to-orange-900/40 border-orange-500/50 backdrop-blur-md shadow-2xl shadow-red-500/20">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Badge className="bg-red-600 text-white px-4 py-1 text-sm font-semibold">
