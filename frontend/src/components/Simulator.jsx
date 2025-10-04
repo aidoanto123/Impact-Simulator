@@ -232,10 +232,48 @@ const Simulator = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <div className="min-h-screen bg-black relative overflow-hidden">
+      {/* Animated Stars Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-blue-950/30 to-black"></div>
+        {/* Star field */}
+        {[...Array(100)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: Math.random() > 0.7 ? '2px' : '1px',
+              height: Math.random() > 0.7 ? '2px' : '1px',
+              backgroundColor: Math.random() > 0.5 ? '#ffffff' : '#fbbf24',
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 3}s`
+            }}
+          />
+        ))}
+        {/* Larger glowing stars */}
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={`glow-${i}`}
+            className="absolute rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              width: '3px',
+              height: '3px',
+              backgroundColor: '#f97316',
+              boxShadow: '0 0 6px #f97316, 0 0 12px #f97316',
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${3 + Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10" />
+      <div className="relative z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-red-600/20 to-yellow-600/20 backdrop-blur-sm" />
         <div className="relative max-w-7xl mx-auto px-4 py-16 text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Zap className="text-orange-500 text-4xl" size={40} />
