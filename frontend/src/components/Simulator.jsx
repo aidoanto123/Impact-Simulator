@@ -28,8 +28,6 @@ import {
   Save,
   Share2,
   RotateCcw,
-  BookOpen,
-  BarChart3
 } from 'lucide-react';
 import { predefinedScenarios, calculateImpact, compositionData, locationSuggestions, historicalComparisons, educationalContent } from '../data/mock';
 
